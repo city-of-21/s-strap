@@ -1,0 +1,170 @@
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+	display: none !important;
+}
+
+body {
+    font-family: futura;
+}
+
+a {
+    cursor: pointer;
+}
+
+.link {
+    cursor: pointer;
+}
+
+.font-futura {
+    font-family: futura;
+}
+
+@-webkit-keyframes pulse {
+	from {
+		opacity: 1.0;/*透明度100%*/
+		}
+	to {
+		opacity: 0.6;/*透明度60%*/
+	}
+}
+.blinking {
+	-webkit-animation-name: pulse;/* 実行する名前 */
+	-webkit-animation-duration: 0.3s;/* 0.3秒かけて実行 */
+	-webkit-animation-iteration-count:infinite;/* 何回実行するか。infiniteで無限 */
+	-webkit-animation-timing-function:ease-in-out;/* イーズインアウト */
+	-webkit-animation-direction: alternate;/* alternateにするとアニメーションが反復 */
+	-webkit-animation-delay: 0s; /* 実行までの待ち時間 */
+}
+
+.navbar-wrapper {
+    margin-top: 0px;
+}
+
+.container {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+    background-color: #E0F8EC;
+}
+
+.view {
+    min-height: 470px;
+}
+
+.div-center{
+	text-align: center;
+}
+
+.div-top{
+	margin-top: 80px;
+}
+
+.tab-title{
+	margin-top: 60px;
+	text-align: center;
+}
+.tab-pane {
+	text-align: center;
+	font-size: 16px;
+}
+.amazon-image-li {
+	float:left;
+	margin: 2px;
+	list-style-type: none;
+	border: solid 1px;
+	border-color: lightgrey;
+}
+.amazon-image-li-text {
+	width: 125px;
+	height: 160px;
+}
+.amazon-image-li-none {
+	list-style-type: none;
+}
+.append-div {
+	width: 92%;
+	margin: 10px auto;
+}
+.button-div {
+    clear: both;
+	width: 92%;
+	margin: 10px auto;
+	padding-top: 10px;
+}
+
+#googlemap {
+	width: 650px;
+	height: 550px;
+	margin: 60px auto 0;
+}
+.smallmap {
+	display: none;
+}
+
+#parallax-view {
+    min-height: 10000px;
+}
+
+.actor {
+    position: relative;
+    left: 0px;
+}
+
+#goal {
+    position:fixed;
+    top:0px;
+    left:1000px;
+    width:2px;
+    height:100%;
+    background-color:gray;
+    z-index: 0;
+}
+
+#restart {
+    position:fixed;
+    top:50%;
+    left:48%;
+    display: none;
+}
+
+#canvas-container{
+	z-index:999;
+}
+
+#canvas{
+	border:solid 1px gray ;
+}
+
+#undo{
+	margin: 8px;
+}
+
+#redo{
+	margin: 8px;
+}
+
+#canvasClock{
+	margin: 10px;
+}
+
+@media (max-width: 767px) {
+	#googlemap {
+		width: 300px;
+		height: auto;
+		margin: 60px auto 0;
+		text-align: center;
+	}
+	.bigmap {
+		display: none;
+	}
+	.smallmap {
+		display: block;
+	}
+	
+	.append-div {
+		width: 92%;
+		margin: 10px auto auto 35px;
+	}
+}

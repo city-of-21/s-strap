@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja" ng-app>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="システム開発 WEB 大阪 中央区 本町">
+        <meta name="description" content="大阪市中央区でコンピュータソフトウェアの受託開発・派遣請負を中心に事業を営む会社の公式サイト。当サイトは「AngularJS 1.2 × Bootstrap 3.0」を使用し、自社で制作。">
+        <meta name="author" content="ken morobayashi">
+        <link rel="shortcut icon" href="./favicon.png">
+
+        <title>株式会社システムウェア | お問い合わせ</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="./dist/css/bootstrap.css" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="./docs-assets/js/html5shiv.js"></script>
+            <script src="./docs-assets/js/respond.min.js"></script>
+        <![endif]-->
+
+        <!-- Custom styles for this template -->
+        <link href="./css/carousel.css" rel="stylesheet">
+        <link href="./css/my-style.css" rel="stylesheet">
+    
+    </head>
+<!-- NAVBAR
+================================================== -->
+    <body>
+    	<div class="navbar-wrapper">
+            <div class="container">
+    
+                <div class="navbar navbar-inverse navbar-static-top" ng-cloak>
+                    <div class="container">
+                        <div class="navbar-header" ng-controller="baseInfoCtrl">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="{{baseurl}}">{{companyname}}</a>
+                        </div>
+                        <div class="navbar-collapse collapse" ng-controller="navLoopCtrl">
+                            <ul class="nav navbar-nav">
+                                <li ng-repeat="navitem in navitems" ng-class="{'dropdown':navitem.dropdown == 'true','active':navitem.text == 'お問い合わせ'}">
+                                    <a href="{{navitem.href}}" ng-if="navitem.dropdown == 'false'">{{navitem.text}}</a>
+                                    <a href="{{navitem.href}}" class="dropdown-toggle" data-toggle="dropdown" ng-if="navitem.dropdown == 'true'">{{navitem.text}}<b class="caret"></b></a>
+                                    <ul class="dropdown-menu" ng-if="navitem.dropdown == 'true'">
+                                        <li ng-repeat="navchild in navitem.navchildren">
+                                            <a ng-if="navitem._blank == 'true'" target="_blank" href="{{navchild.href}}">{{navchild.text}}</a>
+                                            <a ng-if="navitem._blank == 'false'" href="{{navchild.href}}">{{navchild.text}}</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="div-center div-top">
+                <h2>お問い合わせ</h2>
+                <p class="text-warning">所在地：〒541-0051</p>
+                <p class="text-warning">大阪市中央区備後町三丁目３番地９号　備後町コイズミビル６階</p>
+                <p class="text-success">Tel：06-6260-7871</p>
+                <p class="text-info">Fax：06-6260-7873</p>
+                <p class="text-muted">Email：systemware@s-ware.co.jp</p>
+            </div>
+            <div id="googlemap">
+                <iframe class="bigmap" width="640" height="480" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.co.jp/maps?f=q&amp;source=s_q&amp;hl=ja&amp;geocode=&amp;q=%E5%A4%A7%E9%98%AA%E5%BA%9C%E5%A4%A7%E9%98%AA%E5%B8%82%E4%B8%AD%E5%A4%AE%E5%8C%BA%E5%82%99%E5%BE%8C%E7%94%BA%EF%BC%93%E2%88%92%EF%BC%93%E2%88%92%EF%BC%99&amp;aq=&amp;sll=34.681843,135.511631&amp;sspn=0.004623,0.011228&amp;brcurrent=3,0x6000e73098799cf5:0xb07f1c0e2b45d0f5,0&amp;ie=UTF8&amp;hq=&amp;hnear=%E5%A4%A7%E9%98%AA%E5%BA%9C%E5%A4%A7%E9%98%AA%E5%B8%82%E4%B8%AD%E5%A4%AE%E5%8C%BA%E5%82%99%E5%BE%8C%E7%94%BA%EF%BC%93%E4%B8%81%E7%9B%AE%EF%BC%93%E2%88%92%EF%BC%99&amp;t=m&amp;ll=34.685028,135.502195&amp;spn=0.033877,0.054932&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe><br /><small class="bigmap"><a href="https://maps.google.co.jp/maps?f=q&amp;source=embed&amp;hl=ja&amp;geocode=&amp;q=%E5%A4%A7%E9%98%AA%E5%BA%9C%E5%A4%A7%E9%98%AA%E5%B8%82%E4%B8%AD%E5%A4%AE%E5%8C%BA%E5%82%99%E5%BE%8C%E7%94%BA%EF%BC%93%E2%88%92%EF%BC%93%E2%88%92%EF%BC%99&amp;aq=&amp;sll=34.681843,135.511631&amp;sspn=0.004623,0.011228&amp;brcurrent=3,0x6000e73098799cf5:0xb07f1c0e2b45d0f5,0&amp;ie=UTF8&amp;hq=&amp;hnear=%E5%A4%A7%E9%98%AA%E5%BA%9C%E5%A4%A7%E9%98%AA%E5%B8%82%E4%B8%AD%E5%A4%AE%E5%8C%BA%E5%82%99%E5%BE%8C%E7%94%BA%EF%BC%93%E4%B8%81%E7%9B%AE%EF%BC%93%E2%88%92%EF%BC%99&amp;t=m&amp;ll=34.685028,135.502195&amp;spn=0.033877,0.054932&amp;z=14&amp;iwloc=A" style="color:#0000FF;text-align:left">大きな地図で見る</a></small>
+                <iframe class="smallmap" width="300" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.co.jp/maps?f=q&amp;source=s_q&amp;hl=ja&amp;geocode=&amp;q=%E5%A4%A7%E9%98%AA%E5%BA%9C%E5%A4%A7%E9%98%AA%E5%B8%82%E4%B8%AD%E5%A4%AE%E5%8C%BA%E5%82%99%E5%BE%8C%E7%94%BA%EF%BC%93%E2%88%92%EF%BC%93%E2%88%92%EF%BC%99&amp;aq=&amp;sll=34.681843,135.511631&amp;sspn=0.004623,0.011228&amp;brcurrent=3,0x6000e73098799cf5:0xb07f1c0e2b45d0f5,0&amp;ie=UTF8&amp;hq=&amp;hnear=%E5%A4%A7%E9%98%AA%E5%BA%9C%E5%A4%A7%E9%98%AA%E5%B8%82%E4%B8%AD%E5%A4%AE%E5%8C%BA%E5%82%99%E5%BE%8C%E7%94%BA%EF%BC%93%E4%B8%81%E7%9B%AE%EF%BC%93%E2%88%92%EF%BC%99&amp;t=m&amp;ll=34.685028,135.502195&amp;spn=0.021173,0.025749&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe><br /><small class="smallmap"><a href="https://maps.google.co.jp/maps?f=q&amp;source=embed&amp;hl=ja&amp;geocode=&amp;q=%E5%A4%A7%E9%98%AA%E5%BA%9C%E5%A4%A7%E9%98%AA%E5%B8%82%E4%B8%AD%E5%A4%AE%E5%8C%BA%E5%82%99%E5%BE%8C%E7%94%BA%EF%BC%93%E2%88%92%EF%BC%93%E2%88%92%EF%BC%99&amp;aq=&amp;sll=34.681843,135.511631&amp;sspn=0.004623,0.011228&amp;brcurrent=3,0x6000e73098799cf5:0xb07f1c0e2b45d0f5,0&amp;ie=UTF8&amp;hq=&amp;hnear=%E5%A4%A7%E9%98%AA%E5%BA%9C%E5%A4%A7%E9%98%AA%E5%B8%82%E4%B8%AD%E5%A4%AE%E5%8C%BA%E5%82%99%E5%BE%8C%E7%94%BA%EF%BC%93%E4%B8%81%E7%9B%AE%EF%BC%93%E2%88%92%EF%BC%99&amp;t=m&amp;ll=34.685028,135.502195&amp;spn=0.021173,0.025749&amp;z=14&amp;iwloc=A" style="color:#0000FF;text-align:left">大きな地図で見る</a></small>
+            </div>
+        
+            <hr>
+            <!-- FOOTER -->
+            <footer ng-controller="baseInfoCtrl">
+                <p class="pull-right"><a id="back-to-top">Back to top</a></p>
+                <p>&copy;{{copyyear}} {{companyname}} &middot;<a href="{{term.href}}">{{term.text}}</a></p>
+            </footer>
+
+        </div><!-- /.container -->
+
+
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="./docs-assets/js/jquery.js"></script>
+        <script src="./dist/js/bootstrap.min.js"></script>
+        <script src="./docs-assets/js/holder.js"></script>
+        <script src="./js/angular.min.js"></script>
+        <script src="./js/ng-items.js"></script>
+        <script src="./js/analytics.js"></script>
+        <script src="./js/my-function.js"></script>
+    </body>
+</html>

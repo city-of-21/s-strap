@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja" ng-app>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="システム開発 WEB 大阪 中央区 本町">
+        <meta name="description" content="大阪市中央区でコンピュータソフトウェアの受託開発・派遣請負を中心に事業を営む会社の公式サイト。当サイトは「AngularJS 1.2 × Bootstrap 3.0」を使用し、自社で制作。">
+        <meta name="author" content="ken morobayashi">
+        <link rel="shortcut icon" href="../favicon.png">
+    
+        <title>worldclock</title>
+    
+        <!-- Bootstrap core CSS -->
+        <link href="../dist/css/bootstrap.css" rel="stylesheet">
+    
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="../docs-assets/js/html5shiv.js"></script>
+            <script src="../docs-assets/js/respond.min.js"></script>
+        <![endif]-->
+        
+        <link href="../css/carousel.css" rel="stylesheet">
+        <link href="../css/my-style.css" rel="stylesheet">
+		
+    </head>
+<!-- NAVBAR
+================================================== -->
+    <body>
+        <div class="navbar-wrapper">
+            <div class="container">
+    
+                <div class="navbar navbar-inverse navbar-static-top" ng-cloak>
+                    <div class="container">
+                        <div class="navbar-header" ng-controller="baseInfoCtrl">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="{{baseurl}}">{{companyname}}</a>
+                        </div>
+                        <div class="navbar-collapse collapse" ng-controller="navLoopCtrl">
+                            <ul class="nav navbar-nav">
+                                <li ng-repeat="navitem in navitems" ng-class="{'dropdown':navitem.dropdown == 'true','active':navitem.text == 'サンプルサイト'}">
+                                    <a href="{{navitem.href}}" ng-if="navitem.dropdown == 'false'">{{navitem.text}}</a>
+                                    <a href="{{navitem.href}}" class="dropdown-toggle" data-toggle="dropdown" ng-if="navitem.dropdown == 'true'">{{navitem.text}}<b class="caret"></b></a>
+                                    <ul class="dropdown-menu" ng-if="navitem.dropdown == 'true'">
+                                        <li ng-repeat="navchild in navitem.navchildren">
+                                            <a ng-if="navitem._blank == 'true'" target="_blank" href="{{navchild.href}}">{{navchild.text}}</a>
+                                            <a ng-if="navitem._blank == 'false'" href="{{navchild.href}}">{{navchild.text}}</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+        
+        <div class="container">
+	        <div class="div-top div-center">
+	        	<div>地図上の都市をclick!してTimeZoneを選択</div>
+		        <div id="vmap" style="height: 300px;"></div>
+		        <div id="clockString"></div>
+		        <canvas id="canvasClock"></canvas>
+			</div>
+		</div>
+		
+		<!-- Marketing messaging and featurettes
+        ================================================== -->
+        <!-- Wrap the rest of the page in another container to center all the content. -->
+    
+        <div class="container marketing">
+            <!-- FOOTER -->
+            <footer ng-controller="baseInfoCtrl">
+                <p class="pull-right"><a id="back-to-top">Back to top</a></p>
+                <p>&copy;{{copyyear}} {{companyname}} &middot;<a href="{{term.href}}">{{term.text}}</a></p>
+            </footer>
+    
+        </div><!-- /.container -->
+        
+		<!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="../docs-assets/js/jquery.js"></script>
+        <script src="../dist/js/bootstrap.min.js"></script>
+        <script src="../docs-assets/js/holder.js"></script>
+        <script src="../js/angular.min.js"></script>
+        <script src="../js/ng-items.js"></script>
+        <script src="../js/analytics.js"></script>
+        <script src="../js/my-function.js"></script>
+        <script src="./jqvmap/jquery.vmap.min.js"></script>
+		<script src="./jqvmap/maps/jquery.vmap.world.js"></script>
+		<script src="./jqvmap/data/jquery.vmap.sampledata.js"></script>
+        <script src="./js/my-clock.js"></script>
+    </body>
+</html>

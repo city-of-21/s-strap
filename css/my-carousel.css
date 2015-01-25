@@ -1,0 +1,42 @@
+.carousel {
+    margin: 0px;
+    height: 400px;
+}
+
+.carousel .item {
+    background-color: #ffffff;
+    height: 300px;
+}
+
+.carousel-control span {
+    color:#000000;
+}
+
+.carousel-indicators .active {
+    background-color: #000000;
+}
+
+.carousel-indicators li {
+    border: 1px solid #000000;
+}
+
+.carousel-caption {
+    color: #000000;
+}
+
+.carousel-control.left {
+    background-image: -webkit-gradient(linear, 0 top, 100% top, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.0001)));
+    background-image: -webkit-linear-gradient(left, color-stop(rgba(0, 0, 0, 0.3) 0), color-stop(rgba(0, 0, 0, 0.0001) 100%));
+    background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0.3) 0, rgba(0, 0, 0, 0.0001) 100%);
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.3) 0, rgba(0, 0, 0, 0.0001) 100%);
+}
+
+.carousel-control.right {
+    right: 0;
+    left: auto;
+    background-image: -webkit-gradient(linear, 0 top, 100% top, from(rgba(0, 0, 0, 0.0001)), to(rgba(0, 0, 0, 0.3)));
+    background-image: -webkit-linear-gradient(left, color-stop(rgba(0, 0, 0, 0.0001) 0), color-stop(rgba(0, 0, 0, 0.3) 100%));
+    background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0.0001) 0, rgba(0, 0, 0, 0.3) 100%);
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.0001) 0, rgba(0, 0, 0, 0.3) 100%);
+}
+

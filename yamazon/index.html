@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ja" ng-app>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="システム開発 WEB 大阪 中央区 本町">
+        <meta name="description" content="大阪市中央区でコンピュータソフトウェアの受託開発・派遣請負を中心に事業を営む会社の公式サイト。当サイトは「AngularJS 1.2 × Bootstrap 3.0」を使用し、自社で制作。">
+        <meta name="author" content="ken morobayashi">
+        <link rel="shortcut icon" href="../favicon.png">
+    
+        <title>yahoo急上昇ワードをamazonで検索</title>
+    
+        <!-- Bootstrap core CSS -->
+        <link href="../dist/css/bootstrap.css" rel="stylesheet">
+    
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="../docs-assets/js/html5shiv.js"></script>
+            <script src="../docs-assets/js/respond.min.js"></script>
+        <![endif]-->
+        
+        <link href="../css/carousel.css" rel="stylesheet">
+        <link href="../css/my-style.css" rel="stylesheet">
+    
+    </head>
+<!-- NAVBAR
+================================================== -->
+    <body>
+        <div class="navbar-wrapper">
+            <div class="container">
+    
+                <div class="navbar navbar-inverse navbar-static-top" ng-cloak>
+                    <div class="container">
+                        <div class="navbar-header" ng-controller="baseInfoCtrl">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="{{baseurl}}">{{companyname}}</a>
+                        </div>
+                        <div class="navbar-collapse collapse" ng-controller="navLoopCtrl">
+                            <ul class="nav navbar-nav">
+                                <li ng-repeat="navitem in navitems" ng-class="{'dropdown':navitem.dropdown == 'true','active':navitem.text == 'サンプルサイト'}">
+                                    <a href="{{navitem.href}}" ng-if="navitem.dropdown == 'false'">{{navitem.text}}</a>
+                                    <a href="{{navitem.href}}" class="dropdown-toggle" data-toggle="dropdown" ng-if="navitem.dropdown == 'true'">{{navitem.text}}<b class="caret"></b></a>
+                                    <ul class="dropdown-menu" ng-if="navitem.dropdown == 'true'">
+                                        <li ng-repeat="navchild in navitem.navchildren">
+                                            <a ng-if="navitem._blank == 'true'" target="_blank" href="{{navchild.href}}">{{navchild.text}}</a>
+                                            <a ng-if="navitem._blank == 'false'" href="{{navchild.href}}">{{navchild.text}}</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+    
+        <div class="tab-title"><h4>yahoo急上昇ワードをamazonで検索</h4></div>
+        <!-- tabs -->
+        <div class="view">
+            <div class="tabbable">
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="#tab-pane1" data-toggle="tab"></a></li>
+                    <li class=""><a href="#tab-pane2" data-toggle="tab"></a></li>
+                    <li class=""><a href="#tab-pane3" data-toggle="tab"></a></li>
+                    <li class=""><a href="#tab-pane4" data-toggle="tab"></a></li>
+                    <li class=""><a href="#tab-pane5" data-toggle="tab"></a></li>
+                    <li class=""><a href="#tab-pane6" data-toggle="tab"></a></li>
+                    <li class=""><a href="#tab-pane7" data-toggle="tab"></a></li>
+                    <li class=""><a href="#tab-pane8" data-toggle="tab"></a></li>
+                    <li class=""><a href="#tab-pane9" data-toggle="tab"></a></li>
+                    <li class=""><a href="#tab-pane10" data-toggle="tab"></a></li>
+                    <li class=""><a href="#tab-pane11" data-toggle="tab"></a></li>
+                    <li class=""><a href="#tab-pane12" data-toggle="tab"></a></li>
+                    <li class=""><a href="#tab-pane13" data-toggle="tab"></a></li>
+                    <li class=""><a href="#tab-pane14" data-toggle="tab"></a></li>
+                    <li class=""><a href="#tab-pane15" data-toggle="tab"></a></li>
+                    <li class=""><a href="#tab-pane16" data-toggle="tab"></a></li>
+                    <li class=""><a href="#tab-pane17" data-toggle="tab"></a></li>
+                    <li class=""><a href="#tab-pane18" data-toggle="tab"></a></li>
+                    <li class=""><a href="#tab-pane19" data-toggle="tab"></a></li>
+                    <li class=""><a href="#tab-pane20" data-toggle="tab"></a></li>
+                    <li class=""><a href="#tab-pane21" data-toggle="tab"></a></li>
+                    <li class=""><a href="#tab-pane22" data-toggle="tab"></a></li>
+                    <li class=""><a href="#tab-pane23" data-toggle="tab"></a></li>
+                    <li class=""><a href="#tab-pane24" data-toggle="tab"></a></li>
+                    <li class=""><a href="#tab-pane25" data-toggle="tab"></a></li>
+                    <li class=""><a href="#tab-pane26" data-toggle="tab"></a></li>
+                    <li class=""><a href="#tab-pane27" data-toggle="tab"></a></li>
+                    <li class=""><a href="#tab-pane28" data-toggle="tab"></a></li>
+                    <li class=""><a href="#tab-pane29" data-toggle="tab"></a></li>
+                    <li class=""><a href="#tab-pane30" data-toggle="tab"></a></li>
+                </ul>
+                <div id="tab-content" class="tab-content">
+                    <div class="tab-pane active" id="tab-pane1"></div>
+                    <div class="tab-pane" id="tab-pane2"></div>
+                    <div class="tab-pane" id="tab-pane3"></div>
+                    <div class="tab-pane" id="tab-pane4"></div>
+                    <div class="tab-pane" id="tab-pane5"></div>
+                    <div class="tab-pane" id="tab-pane6"></div>
+                    <div class="tab-pane" id="tab-pane7"></div>
+                    <div class="tab-pane" id="tab-pane8"></div>
+                    <div class="tab-pane" id="tab-pane9"></div>
+                    <div class="tab-pane" id="tab-pane10"></div>
+                    <div class="tab-pane" id="tab-pane11"></div>
+                    <div class="tab-pane" id="tab-pane12"></div>
+                    <div class="tab-pane" id="tab-pane13"></div>
+                    <div class="tab-pane" id="tab-pane14"></div>
+                    <div class="tab-pane" id="tab-pane15"></div>
+                    <div class="tab-pane" id="tab-pane16"></div>
+                    <div class="tab-pane" id="tab-pane17"></div>
+                    <div class="tab-pane" id="tab-pane18"></div>
+                    <div class="tab-pane" id="tab-pane19"></div>
+                    <div class="tab-pane" id="tab-pane20"></div>
+                    <div class="tab-pane" id="tab-pane21"></div>
+                    <div class="tab-pane" id="tab-pane22"></div>
+                    <div class="tab-pane" id="tab-pane23"></div>
+                    <div class="tab-pane" id="tab-pane24"></div>
+                    <div class="tab-pane" id="tab-pane25"></div>
+                    <div class="tab-pane" id="tab-pane26"></div>
+                    <div class="tab-pane" id="tab-pane27"></div>
+                    <div class="tab-pane" id="tab-pane28"></div>
+                    <div class="tab-pane" id="tab-pane29"></div>
+                    <div class="tab-pane" id="tab-pane30"></div>
+                </div>
+            </div>
+        </div>
+        <!-- /tabs -->
+        
+        <!-- Marketing messaging and featurettes
+        ================================================== -->
+        <!-- Wrap the rest of the page in another container to center all the content. -->
+    
+        <div class="container marketing">
+            <!-- FOOTER -->
+            <footer ng-controller="baseInfoCtrl">
+                <p class="pull-right"><a id="back-to-top">Back to top</a></p>
+                <p>&copy;{{copyyear}} {{companyname}} &middot;<a href="{{term.href}}">{{term.text}}</a></p>
+            </footer>
+    
+        </div><!-- /.container -->
+
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="../docs-assets/js/jquery.js"></script>
+        <script src="../dist/js/bootstrap.min.js"></script>
+        
+        <!-- Add fancyBox main JS and CSS files -->
+        <script type="text/javascript" src="js/jquery.fancybox.js?v=2.1.4"></script>
+        <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css?v=2.1.4" media="screen" />
+        <!-- Add Button helper (this is optional) -->
+        <link rel="stylesheet" type="text/css" href="css/jquery.fancybox-buttons.css?v=1.0.5" />
+        <script type="text/javascript" src="js/jquery.fancybox-buttons.js?v=1.0.5"></script>
+        <!-- Add Thumbnail helper (this is optional) -->
+        <link rel="stylesheet" type="text/css" href="css/jquery.fancybox-thumbs.css?v=1.0.7" />
+        <script type="text/javascript" src="js/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+        <!-- Add Media helper (this is optional) -->
+        <script type="text/javascript" src="js/jquery.fancybox-media.js?v=1.0.5"></script>
+            
+        <script src="../docs-assets/js/holder.js"></script>
+        <script src="../js/angular.min.js"></script>
+        <script src="../js/ng-items.js"></script>
+        <script src="../js/analytics.js"></script>
+        <script src="../js/my-function.js"></script>
+        <script src="./js/my-external-api.js"></script>
+        <script src="./js/my-create-view.js"></script>
+    </body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ja" ng-app>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="システム開発 WEB 大阪 中央区 本町">
+        <meta name="description" content="大阪市中央区でコンピュータソフトウェアの受託開発・派遣請負を中心に事業を営む会社の公式サイト。当サイトは「AngularJS 1.2 × Bootstrap 3.0」を使用し、自社で制作。">
+        <meta name="author" content="ken morobayashi">
+        <link rel="shortcut icon" href="./favicon.png">
+
+        <title>株式会社システムウェア | 会社概要</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="./dist/css/bootstrap.css" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="./docs-assets/js/html5shiv.js"></script>
+            <script src="./docs-assets/js/respond.min.js"></script>
+        <![endif]-->
+
+        <!-- Custom styles for this template -->
+        <link href="./css/carousel.css" rel="stylesheet">
+        <link href="./css/my-style.css" rel="stylesheet">
+    
+    </head>
+<!-- NAVBAR
+================================================== -->
+    <body>
+      <div class="navbar-wrapper">
+            <div class="container">
+    
+                <div class="navbar navbar-inverse navbar-static-top" ng-cloak>
+                    <div class="container">
+                        <div class="navbar-header" ng-controller="baseInfoCtrl">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="{{baseurl}}">{{companyname}}</a>
+                        </div>
+                        <div class="navbar-collapse collapse" ng-controller="navLoopCtrl">
+                            <ul class="nav navbar-nav">
+                                <li ng-repeat="navitem in navitems" ng-class="{'dropdown':navitem.dropdown == 'true','active':navitem.text == '会社概要'}">
+                                    <a href="{{navitem.href}}" ng-if="navitem.dropdown == 'false'">{{navitem.text}}</a>
+                                    <a href="{{navitem.href}}" class="dropdown-toggle" data-toggle="dropdown" ng-if="navitem.dropdown == 'true'">{{navitem.text}}<b class="caret"></b></a>
+                                    <ul class="dropdown-menu" ng-if="navitem.dropdown == 'true'">
+                                        <li ng-repeat="navchild in navitem.navchildren">
+                                            <a ng-if="navitem._blank == 'true'" target="_blank" href="{{navchild.href}}">{{navchild.text}}</a>
+                                            <a ng-if="navitem._blank == 'false'" href="{{navchild.href}}">{{navchild.text}}</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="div-center div-top">
+                <h2>会社概要</h2>
+                <h4>会社名称</h4>
+                <p class="text-muted">株式会社システムウェア</p>
+                <h4>所在地</h4>
+                <p class="text-muted">〒541-0051</p>
+                <p class="text-muted">大阪市中央区備後町三丁目３番地９号　備後町コイズミビル６階</p>
+                <h4>連絡先</h4>
+                <p class="text-muted">Tel:06-6260-7871</p>
+                <p class="text-muted">Fax:06-6260-7873</p>
+                <h4>事業内容</h4>
+                <p class="text-muted">コンピュータソフトウエアの受託開発及び派遣請負</p>
+                <p class="text-muted">コンピュータソフトウエアパッケージの製造販売</p>
+                <h4>設立</h4>
+                <p class="text-muted">昭和６０年（１９８５年）９月３日</p>
+                <h4>資本金</h4>
+                <p class="text-muted">１,０００万円</p>
+                <h4>従業員数</h4>
+                <p class="text-muted">１０名</p>
+                <h4>役員</h4>
+                <p class="text-muted">代表取締役：諸林　徹</p>
+                <p class="text-muted">取締役：神山　研治</p>
+                <p class="text-muted">取締役：瀬川　善夫</p>
+                <p class="text-muted">監査役：諸林　敏子</p>
+                <h4>取引銀行</h4>
+                <p class="text-muted">りそな銀行　船場支店</p>
+                <p class="text-muted">三菱東京UFJ銀行　信濃橋支店</p>
+                <p class="text-muted">大阪市信用金庫　江戸堀支店</p>
+                <h4>関連会社</h4>
+                <p class="text-muted">株式会社  技術ソフト</p>
+                <p class="text-muted">有限会社  アサインセンター</p>
+            </div>
+            
+            <hr>
+            <div class="div-center about-title">
+                <h2>沿革</h2>
+                <p class="text-muted">昭和６０年９月：大阪市東住吉区に於いて資本金５００万円で会社設立</p>
+                <p class="text-muted">昭和６１年３月：大阪市南区船場に移転</p>
+                <p class="text-muted">平成元年３月：大阪市中央区南久宝寺町に移転</p>
+                <p class="text-muted">平成５年７月：大阪市西区立売堀に移転</p>
+                <p class="text-muted">平成６年１１月：大阪市西区西本町に移転</p>
+                <p class="text-muted">平成８年１１月：資本金１,０００万円に増資</p>
+                <p class="text-muted">平成１７年６月：大阪市中央区瓦町に移転</p>
+                <p class="text-muted">平成２４年７月：大阪市中央区備後町に移転</p>
+            </div>
+            
+            <hr>
+            <!-- FOOTER -->
+            <footer ng-controller="baseInfoCtrl">
+                <p class="pull-right"><a id="back-to-top">Back to top</a></p>
+                <p>&copy;{{copyyear}} {{companyname}} &middot;<a href="{{term.href}}">{{term.text}}</a></p>
+            </footer>
+    
+        </div><!-- /.container -->
+
+
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="./docs-assets/js/jquery.js"></script>
+        <script src="./dist/js/bootstrap.min.js"></script>
+        <script src="./docs-assets/js/holder.js"></script>
+        <script src="./js/angular.min.js"></script>
+        <script src="./js/ng-items.js"></script>
+        <script src="./js/analytics.js"></script>
+        <script src="./js/my-function.js"></script>
+    </body>
+</html>

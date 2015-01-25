@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja" ng-app>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="システム開発 WEB 大阪 中央区 本町">
+        <meta name="description" content="大阪市中央区でコンピュータソフトウェアの受託開発・派遣請負を中心に事業を営む会社の公式サイト。当サイトは「AngularJS 1.2 × Bootstrap 3.0」を使用し、自社で制作。">
+        <meta name="author" content="ken morobayashi">
+        <link rel="shortcut icon" href="./favicon.png">
+
+        <title>株式会社システムウェア | 利用規約</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="./dist/css/bootstrap.css" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="./docs-assets/js/html5shiv.js"></script>
+            <script src="./docs-assets/js/respond.min.js"></script>
+        <![endif]-->
+
+        <!-- Custom styles for this template -->
+        <link href="./css/carousel.css" rel="stylesheet">
+        <link href="./css/my-style.css" rel="stylesheet">
+    
+    </head>
+<!-- NAVBAR
+================================================== -->
+    <body>
+      <div class="navbar-wrapper">
+            <div class="container">
+    
+                <div class="navbar navbar-inverse navbar-static-top" ng-cloak>
+                    <div class="container">
+                        <div class="navbar-header" ng-controller="baseInfoCtrl">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="{{baseurl}}">{{companyname}}</a>
+                        </div>
+                        <div class="navbar-collapse collapse" ng-controller="navLoopCtrl">
+                            <ul class="nav navbar-nav">
+                                <li ng-repeat="navitem in navitems" ng-class="{'dropdown':navitem.dropdown == 'true','active':navitem.text == ''}">
+                                    <a href="{{navitem.href}}" ng-if="navitem.dropdown == 'false'">{{navitem.text}}</a>
+                                    <a href="{{navitem.href}}" class="dropdown-toggle" data-toggle="dropdown" ng-if="navitem.dropdown == 'true'">{{navitem.text}}<b class="caret"></b></a>
+                                    <ul class="dropdown-menu" ng-if="navitem.dropdown == 'true'">
+                                        <li ng-repeat="navchild in navitem.navchildren">
+                                            <a ng-if="navitem._blank == 'true'" target="_blank" href="{{navchild.href}}">{{navchild.text}}</a>
+                                            <a ng-if="navitem._blank == 'false'" href="{{navchild.href}}">{{navchild.text}}</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="div-top">
+                <h2>利用規約</h2>
+                <p class="text-muted">株式会社システムウェアウェブサイトの利用に際しての利用規約を掲載しています。</p>
+                <p class="text-muted">株式会社システムウェアウェブサイト（以下、「当サイト」と言う。）では、弊社の活動に関する情報の提供サービスを行っています。当サイトをご利用の際には本規約に従っていただきます。また、サービスのご利用をもって本規約の内容を承諾頂いたものとみなします。本規約の内容は、必要に応じて、事前の予告なしに変更されることがありますので、サービスのご利用に際しては、本ページで利用規約の最新の内容をご確認下さい。</p>
+                <h4>１．サービスの利用</h4>
+                <p class="text-muted">1）利用者は、サービスのご利用に際して関連する全ての法律・法令等に従うものとします。</p>
+                <p class="text-muted">2）サービスをご利用になる場合は、ウェブにアクセスする必要があります。利用者は自らの費用と責任で必要な機器・ソフトウェア・通信手段等を用意し適切に接続・操作してウェブにアクセスするものとします。</p>
+                <p class="text-muted">3）サービスのご利用に関して現時点では利用料金を請求しておりませんが、弊社は利用料金請求の権限を永久に放棄するものではありません。</p>
+                <p class="text-muted">4）弊社では将来、サービスの内容を追加又は変更・削除することがあります。弊社が、サービスの内容を追加又は変更・削除した場合にも、利用者に対しては一切責任を負わないものとします。</p>
+                <p class="text-muted">5）弊社は、サービスの確実な提供又はアクセス結果等につき何ら保証するものではありません。</p>
+                <p class="text-muted">6）当サイトの保守（緊急的な保守を含む。）のため、事前の通知なしにサービスを停止することがあります。</p>
+                <p class="text-muted">7）弊社は、当サイトの提供するサービスの不確実性又はサービス停止等に起因して利用者に発生した一切の損害について、その責任を負うものではありません。詳細については、「免責事項について」をご覧下さい。</p>
+                <p class="text-muted">8）弊社は、利用者が、当サイトが提供するサービス、サービスの利用、サービスへのアクセスについて、その全部あるいは一部であるかを問わず商業目的で利用することを禁止いたします。</p>
+                <h4>２．リンクについて</h4>
+                <p class="text-muted">1）当サイトへのリンクは、原則として自由です。但し、リンク元サイトのコンテンツが（ア）公序良俗に反するもの（イ）法律・法令等に違反し又は違反するおそれがある内容を含むものと認められる場合には、リンクはお断り致します。</p>
+                <p class="text-muted">2）当サイトへのリンク設定後、弊社までご一報いただきたく存じます。</p>
+                <h4>３．個人情報等の取り扱い</h4>
+                <p class="text-muted">当サイトはサービス利用者の個人情報を取り扱うサービスではございませんが、個人情報に関わる入力等はお控えいただきたく存じます。</p>
+                <h4>４．知的財産権の取り扱い</h4>
+                <p class="text-muted">サービスの利用者は、当サイトで提供されている情報等に関する「知的財産権の帰属」について理解した上で、第三者の知的財産権を尊重するものとし、情報等の取り扱いについては慎重な配慮を行うようにして下さい。</p>
+                <h4>５．弊社への補償</h4>
+                <p class="text-muted">利用者によるサービスの利用、サービスへの接続、利用者の本規約違反もしくは利用者による第三者の権利侵害に起因又は関連して生じた全ての苦情や請求については、利用者自身の費用と責任で解決するものとし、弊社は一切責任を負いません。また、当該苦情や請求への対応に関連して弊社に費用が発生（賠償金の支払いを含む。）した場合には、利用者は当該費用を負担するものとします。</p>
+                <h4>６．利用規約違反への対応</h4>
+                <p class="text-muted">本規約に違反するような行為等を発見された場合には、弊社までご連絡下さい。</p>
+                <h4>７．その他</h4>
+                <p class="text-muted">■ JavaScript</p>
+                <p class="text-muted">当サイトでは、より便利で快適にご利用いただくためにJavaScriptを使用しています。</p>
+                <p class="text-muted">ご使用のブラウザ設定においてJavaScriptをオン（有効）にされていない場合には、正しく機能しない、もしくは正しく表示されない場合がございます。あらかじめご了承ください。</p>
+                <p class="text-muted">■ Cookie</p>
+                <p class="text-muted">当サイトをご利用にあたって、アフィリエイト事業者への広告配信、利便性向上、掲載内容の最適化、などにCookieを利用しています。Cookie情報には、お客様の氏名、ご住所、電話番号など個人を特定する情報は一切含まれておりません。お客様のコンピューターへ悪影響を及ぼすことはありません。Cookie情報は統計的なマーケティング情報として利用する場合があります。</p>
+                <p class="text-muted">■ ソーシャルメディアについて</p>
+                <p class="text-muted">当サイトでは、外部ソーシャルメディアへのリンク利用を使用しています。利用にあたっては、各サービスのログインアカウントが必要となります。ソーシャルメディアにおける当社およびその従業員が発信する情報は、必ずしも公式発表・見解を表すものではなく、正確性については一切責任を負いかねます。</p>
+            </div>
+            
+            <hr>
+            <!-- FOOTER -->
+            <footer ng-controller="baseInfoCtrl">
+                <p class="pull-right"><a id="back-to-top">Back to top</a></p>
+                <p>&copy;{{copyyear}} {{companyname}} &middot;<a href="{{term.href}}">{{term.text}}</a></p>
+            </footer>
+    
+        </div><!-- /.container -->
+
+
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="./docs-assets/js/jquery.js"></script>
+        <script src="./dist/js/bootstrap.min.js"></script>
+        <script src="./docs-assets/js/holder.js"></script>
+        <script src="./js/angular.min.js"></script>
+        <script src="./js/ng-items.js"></script>
+        <script src="./js/analytics.js"></script>
+        <script src="./js/my-function.js"></script>
+    </body>
+</html>
