@@ -27,9 +27,17 @@ $(document).ready(function(){
     $('#link-swift').on('click',function(){
         window.open("http://shiftswift.blogspot.jp/");
     });
+    
+    $('#link-salware').on('click',function(){
+        window.open("http://fc-salware.blogspot.jp/");
+    });
 
     $('#link-practice-camera').on('click',function(){
         window.open("https://itunes.apple.com/jp/app/practice-camera-xie-zhen-gou/id954811892?mt=8&uo=4");
+    });
+    
+    $('#link-listen').on('click',function(){
+        window.open("https://itunes.apple.com/jp/app/id979555997?mt=8&ign-mpt=uo%3D4");
     });
         
     $('.carousel').carousel();
